@@ -1,0 +1,67 @@
+.container{
+    background-color:#f0f0f0;
+}
+.padding{
+    padding-top: .2rem;
+}
+.top{
+    height: .84rem;
+    line-height: .84rem;
+    background: #fff;
+    color: #1c1b1f;
+    font-size: .24rem;
+    margin-bottom: .2rem;
+}
+.top img{
+    float: right;
+    width: .38rem;
+    height: .37rem;
+    margin-top: .24rem;
+}
+.des{
+    font-size: .24rem;
+    color: #777777;
+    line-height: .5rem;
+}
+.des span{
+    float: right;
+}
+.des span img{
+    width:.26rem ;
+    height: .26rem;
+}
+.list li{
+    height: 1.3rem;
+    background: url("../images/card_bg_03.jpg") no-repeat center;
+    background-size: contain;
+    margin-top: .2rem;
+}
+.list li img{
+    float: left;
+    width: .8rem;
+    height: .8rem;
+    margin-top:.25rem ;
+    margin-left: .3rem;
+}
+.list li p{
+    float: left;
+    font-size: .24rem;
+    color: #1c1b1f;
+    margin-top: .25rem;
+    padding-left: .1rem;
+}
+.list li p span{
+    color: #636363;
+    line-height: .6rem;
+}
+.list li .sale{
+    float: right;
+    font-size: .26rem;
+    padding-right: .2rem;
+    color: #fff;
+    line-height: .26rem;
+}
+.list li .sale span{
+    font-size: .42rem;
+    color: #fff;
+}

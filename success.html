@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付成功</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="js/fontSize.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/success.css">
+</head>
+<body>
+<div class="container">
+    <div class="padding"></div>
+    <div class="wrap box">
+        <div class="inner-wrap">
+            <div class="line-one clear">
+                <div class="logo"></div>
+                <div class="time">
+                    <p class="clock" id="timer">00:00:29</p>
+                    <p class="tit">剩余时间</p>
+                </div>
+            </div>
+            <p class="des">使用时间：5分钟</p>
+            <p class="des">实付金额：￥0.1</p>
+            <div class="link clear">
+                <a href="#">么么商城</a>
+                <a href="#">领取购物商城</a>
+            </div>
+            <p class="tip">
+                温馨提示：<br>
+                信号不足会导致设备启动异常，如设备未能正常启动，系统会在2-3分钟
+                内退款。给您带来的不便，深感抱歉。我们会继续努力为您营造更温馨
+                舒适的按摩体验！
+                <a href="#">故障申诉</a>
+                <a href="#">退款申请</a>
+            </p>
+        </div>
+    </div>
+    <div class="advert wrap">
+        <img src="./images/suc_ad_07.jpg" alt="">
+    </div>
+</div>
+<script>
+    /*倒计时*/
+    function fly() {
+        var str = '';
+        var dateF = new Date('2018-1-26 23:00:00');
+        var dateN = new Date();
+        //var ms = dateF - dateN;
+        var ms = dateF.getTime() - dateN.getTime();
+        if(ms <= 0){
+            str = '已过期！';
+            clearInterval(timer);
+        }else{
+            var day = Math.floor(ms/1000/60/60/24);   //20.1234
+            var hour = Math.floor(ms/1000/60/60%24);
+            var min = Math.floor(ms/1000/60%60);
+            var sec = Math.floor(ms/1000%60);
+            str = addZero(hour)+':'+addZero(min)+':'+addZero(sec);
+        }
+        document.getElementById('timer').innerHTML = str;
+    }
+    fly();
+    var timer = setInterval(fly,1000);
+    function addZero(a) {
+        return a < 10 ? '0'+a : a;
+    }
+
+</script>
+</body>
+</html>

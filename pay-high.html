@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付-高级会员</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="js/fontSize.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/pay.css">
+</head>
+<body>
+    <div class="container">
+        <div class="banner"></div>
+        <div class="wrap">
+            <div class="card card1">
+                <div class="inner-wrap">
+                    <div class="tit"><span>么么踹—套餐选择</span></div>
+                    <ul class="menu">
+                        <li val="6.00"><span>￥<i>6.00</i></span><span class="dis">么么6分钟</span><img src="./images/icon01.jpg" alt=""></li>
+                        <li val="10.00"><span>￥<i>10.00</i></span><span class="dis">捏捏15分钟</span><img src="./images/icon01.jpg" alt=""></li>
+                        <li val="20.00"><span>￥<i>20.00</i></span><span class="dis">踹踹25分钟</span><img src="./images/icon01.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fav-list">
+            <div class="card fav-item">
+                <div class="inner-wrap">
+                    <span class="label">减</span>
+                    <span>高级会员五折优惠</span>
+                    <!--<a href="#" style="padding-right:.2rem;text-decoration: underline;color: #4993f7;">立即加入</a>-->
+                    <span class="price">  - ￥<i>5</i></span>
+                </div>
+            </div>
+            <!--<div class="card fav-item">
+                <div class="inner-wrap">
+                    <span class="label">券</span>
+                    <span>高级会员五折优惠<span class="small">使用支付么么券</span>
+                    </span>
+                    <i>&gt;</i>
+                    <a href="#" class="bg-red">2张可用</a>
+                </div>
+            </div>-->
+            <div class="card fav-item">
+                <div class="inner-wrap">
+                    <span class="label">券</span>
+                    <span>高级会员五折优惠<span class="small">使用支付么么券</span>
+                    </span>
+                    <i>&gt;</i>
+                    <a href="#">10张可赠</a>
+                </div>
+            </div>
+        </div>
+            <div class="count card">
+                <div class="inner-wrap">
+                    <span class="label">优惠<i></i></span>
+                    <a href="#">优惠说明？</a>
+                    <span>待支付￥<i>5</i></span>
+                </div>
+            </div>
+            <div class="agreement">
+                <!--<img src="./images/icon03.jpg" alt="">-->
+                <input type="checkbox">
+                <span>我已阅读并同意<a href="#">么么踹服务协议</a>的内容</span>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foot">
+                <div class="wrap">
+                    <a href="#" class="rel">余额支付</a>
+                    <a href="#" class="wechat">微信支付</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('.menu li img').click(function () {
+                this.src='./images/icon02.jpg';
+                $(this).parent().siblings().find('img').attr('src','./images/icon01.jpg');
+                //得到选中的套餐
+                var val = $(this).parent().attr('val');
+            })
+        })
+    </script>
+</body>
+</html>

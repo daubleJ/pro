@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vip-高级</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="js/fontSize.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/vip.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="wrap">
+                <img src="./images/head_03.jpg" alt="">
+                <p>
+                    <span>晴雯</span><br>
+                    <span>[普通vip会员]</span>
+                </p>
+                <p class="time">会员有效期：<span>2017/12/1-2018/1/1</span></p>
+            </div>
+        </div>
+        <div class="menu menu1">
+            <div class="wrap">
+                <div class="tit">么么踹VIP会员套餐</div>
+                <ul class="list">
+                    <li>
+                        <p>高级vip会员 <span class="span1">超值推荐</span><br><span class="span2">一个月（30天）会员</span></p>
+                        <p>￥<span class="num">99</span></p>
+                    </li>
+                    <li class="cur">
+                        <p>高级vip会员 <span class="span1">超值推荐</span><br><span class="span2">一个月（30天）会员</span></p>
+                        <p>￥<span class="num">29</span></p>
+                    </li>
+                </ul>
+                <!--<p class="clear"><a href="#">了解更多么么踹VIP会员详情</a></p>-->
+            </div>
+        </div>
+        <div class="desc">
+            <div class="wrap">
+                <p class="title">么么踹VIP会员权益</p>
+                <p class="tit">普通VIP会员</p>
+                <p>关注公众号即可成为么么踹普通VIP会员，同时获得5张半价“赠送么么券”
+                    ，可转赠好友使用。普通VIP会员，每次使用智能支付并成功付款后，即可
+                    获得一张半价“支付么么券”，下次使用智能支付时可用；
+                    <br>有效期：<span>长期</span>；</p>
+                <p class="tit">高级VIP会员</p>
+                <p>每月充值￥29赠送30张半价“赠送么么券”可转赠好友使用，高级VIP会员
+                    可享受智能支付5折优惠；
+                    <br>有效期：<span>30天</span>；</p>
+            </div>
+        </div>
+        <div class="qa">
+            <div class="wrap">
+                <img src="./images/help2_35.gif" alt="">常见问题
+                <i></i>
+            </div>
+        </div>
+        <div class="tip"><div class="wrap">
+            会员最终解释权归深圳么么侠可以所有，如有变动，平台会及时通知
+        </div></div>
+        <div class="fixed">
+            <div class="inner">
+                <div class="wrap">
+                    总价 <span id="price">29</span>
+                    <a href="#">确认支付</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('.list li').click(function () {
+                $(this).addClass('cur').siblings().removeClass('cur');
+                var num = $(this).find('.num').html();
+                $('#price').html(num);
+            })
+        })
+    </script>
+</body>
+</html>
